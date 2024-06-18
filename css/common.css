@@ -20,3 +20,108 @@ a{
     color: var(--basecolor);
     text-decoration: none;
 }
+li{ list-style: none;}
+body, ul, p, div{
+    margin: 0;
+    padding: 0;
+}
+
+/* 공통클래스 */
+.title{
+    color: #111;  
+    font-size: 2.25rem;   
+}
+.linkcss{   
+    font-size: 1.125rem;
+}
+
+.activeColor{
+    color : var(--activecolor)
+}
+.pointColor{
+    color:var(--pointcolor)
+}
+.activeColorBg{
+    background-color: var(--activecolor);
+}
+
+.container{
+    /* 내 자식의 레이아웃 
+       
+    */
+    display: flex;
+    width: 90rem;
+    margin: 0 auto;
+    /* height: 9.3125rem;  */
+    align-items: center;
+    gap: 1.875rem;
+    flex-shrink: 0;
+}
+.search{
+    width: 39.5625rem;
+    height: 5.1875rem;
+    flex-shrink: 0;
+}
+.search input{
+    display: block;
+    width: 39.5625rem;
+    height: 5.1875rem;
+    border-radius: 3.875rem;
+    border: 2px solid var(--pointcolor);
+    background: rgba(217, 217, 217, 0.00);
+}
+
+.utilmenu{
+    width: 39.4375rem;
+    height: 3.1875rem;
+    flex-shrink: 0;
+}
+.utilmenu ul{
+    display: flex;
+    width: 39.4375rem;
+    height: 3.1875rem;
+    justify-content: flex-end; /*x축*/
+    align-items:center; /*y*/
+    gap: 1.875rem;
+    flex-shrink: 0;
+}
+
+/* 클래스가 utilmenu인 태그 li태그중에서
+클래스가 m인 거 찾아
+찾았으면 그 안의 두번째 img태그 나타나지마 */
+.utilmenu li.m img:nth-child(2){
+    display:none
+}
+.utilmenu li.m:hover img:nth-child(2){
+    display:block
+}
+.utilmenu li.m:hover img:nth-child(1){
+    display:none
+}
+
+.cs svg:hover path{
+  fill: red;
+}
+
+/* .cart svg path{
+    fill: red;
+    transition: 0.5s;
+}
+.cart svg:hover path{
+    fill: blue;
+} */
+
+.cart{
+    background-color: red;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.cart path{
+    fill: white;
+}
+.cart:hover{
+    background-color: #111;
+}
+
+
